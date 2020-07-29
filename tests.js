@@ -1,4 +1,7 @@
 // Unit tests for the helloWorld function
+
+const randomBoolean = Boolean(Math.round(Math.random()))
+
 describe('helloWorld', function() {
     it('should be a defined function', function() {
       expect(typeof helloWorld).toBe('function');
@@ -21,6 +24,24 @@ describe('sayHello', function() {
     });
     it('should return a string when called', function () {
         expect(typeof sayHello()).toBe("string");
+    });
+    it("should return 'Hello, World!' with no input", function () {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World!' with boolean input", function () {
+        expect(sayHello(randomBoolean)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World!' with 'null' input", function () {
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World!' with an empty string '' input", function () {
+        expect(sayHello('')).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World!' with a number input", function () {
+        expect(sayHello(5)).toBe("Hello, World!");
+    });
+    it("should return 'Hello, World!' with a string numeral input", function () {
+        expect(sayHello("5")).toBe("Hello, World!");
     });
     it("should return 'Hello, Jane!' with the input of 'Jane'", function () {
         expect(sayHello("Jane")).toBe("Hello, Jane!");

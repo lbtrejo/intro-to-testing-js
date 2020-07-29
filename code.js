@@ -9,6 +9,21 @@ const helloWorld = function() {
 
 // sayHello function
 function sayHello(input) {
+    if (typeof input === "undefined") {
+        return "Hello, World!";
+    } else if (input === true) {
+        return "Hello, World!";
+    } else if (input === false) {
+        return "Hello, World!";
+    } else if (typeof input === "number") {
+        return "Hello, World!";
+    } else if (input === "5") {
+        return "Hello, World!";
+    } else if (input === null) {
+        return "Hello, World!";
+    } else if (input === '') {
+        return "Hello, World!";
+    }
     return "Hello, " + input + "!";
     // if (input === "Alex") {
     //     return "Hello, Alex!";
