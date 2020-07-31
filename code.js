@@ -36,3 +36,11 @@ function sayHello(input) {
     // }
     // return "Hello, Jane!";
 }
+
+function isFive(x) {
+ if (x === 5 || x === "5") {
+     return true;
+ } else {
+     return false;
+ }
+}
